@@ -12,6 +12,9 @@ public class App {
         String choice = scanner.next();
         if (choice.equals("1")) {
             Cli.greating();
+        } else if (choice.equals("2")) {
+            randomGame.rG();
+
         }
         scanner.close();
 //        Cli.greating();
