@@ -1,9 +1,8 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class randomGame {
+public class RandomGame {
     public static void rG() {
         int rNumber;
         int i;
@@ -14,9 +13,10 @@ public class randomGame {
         System.out.println("Hello, " + userName + "!");
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
-            rNumber = (int)(Math.random()*10);
-            Random r = new Random();
-            rNumber = r.nextInt(100) + 1;
+//            GenerateRandomInt generateRandom = new GenerateRandomInt();
+//            rNumber = generateRandom.generate();
+            GenerateController generateController = new GenerateController();
+            rNumber = generateController.Generate(new GenerateRandomInt());
             String isEven = (rNumber % 2 == 0)  ? "yes" : "no";
             System.out.println("Question: " + rNumber);
             System.out.print("Your answer: ");

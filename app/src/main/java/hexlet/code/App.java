@@ -11,10 +11,13 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("Your choice: ");
         String choice = scanner.next();
+        Engine engine = new Engine();
         if (choice.equals("1")) {
             Cli.greating();
         } else if (choice.equals("2")) {
-            randomGame.rG();
+            engine.rG(2);
+        } else if (choice.equals("3")) {
+            engine.rG(3);
         }
         scanner.close();
 //        Cli.greating();
