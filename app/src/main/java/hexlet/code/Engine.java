@@ -1,5 +1,9 @@
 package hexlet.code;
 
+import hexlet.code.games.Game2;
+import hexlet.code.games.Game3;
+import hexlet.code.games.Game4;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -15,27 +19,9 @@ public class Engine {
         System.out.print("May I have your name? ");
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        System.out.println(getStrMainQuestion(numGame));  // Вопрос игры.
+//        System.out.println(getStrMainQuestion(numGame));  // Вопрос игры.
         GenerateController generateController = new GenerateController();
-//        for (i = 0; i < 3; i++) {
-//            rNumber = generateController.Generate(new GenerateRandomInt());
-//            String isEven = (rNumber % 2 == 0)  ? "yes" : "no";
-//            System.out.println("Question: " + rNumber);
-//            System.out.print("Your answer: ");
-//            String answer = scanner.next();
-//            if (isEven.equals(answer)) {
-//                System.out.println("Correct!");
-//            }
-//            else {
-//                System.out.println("'"+ answer + "' is wrong answer ;(. Correct answer was '"+ isEven +"'.");
-//                System.out.println("Let's try again, " + userName + "!");
-//                break;
-//            }
-//        }
         bodyGame(numGame, generateController, scanner);
-//        if (i >= 2) {
-//            System.out.println("Congratulations, " + userName + "!");
-//        }
     }
 
     public String getStrMainQuestion(int numGame) {
@@ -49,59 +35,11 @@ public class Engine {
     }
     public void bodyGame(int numGame,GenerateController generateController, Scanner scanner){
         if (numGame == 2) {
-            int rNumber = 0;
-            int i;
-            for (i = 0; i < 3; i++) {
-                rNumber = generateController.Generate(new GenerateRandomInt());
-                String isEven = (rNumber % 2 == 0) ? "yes" : "no";
-                System.out.println("Question: " + rNumber);
-                System.out.print("Your answer: ");
-                String answer = scanner.next();
-                if (isEven.equals(answer)) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + isEven + "'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    break;
-                }
-            }
-            if (i > 2) {
-                System.out.println("Congratulations, " + userName + "!");
-            }
+            Game2.Create(generateController, scanner, userName);
         } else if (numGame == 3) {
-            int rNumber1 = 0;
-            int rNumber2 = 0;
-            String rOperand = "";
-            String rExpression = "";
-            int progAns = 0;
-            int i;
-            for (i = 0; i < 3; i++) {
-                rNumber1 = generateController.Generate(new GenerateRandomInt());
-                rNumber2 = generateController.Generate(new GenerateRandomInt());
-                rOperand = generateController.Generate(new GenerateRandomOperand());
-                rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
-                switch (rOperand) {
-                    case "+": progAns = rNumber1 + rNumber2;
-                        break;
-                    case "-": progAns = rNumber1 - rNumber2;
-                        break;
-                    case "*": progAns = rNumber1 * rNumber2;
-                        break;
-                }
-                System.out.println("Question: " + rExpression);
-                System.out.print("Your answer: ");
-                String answer = scanner.next();
-                if (progAns == Integer.parseInt(answer)) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + progAns + "'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    break;
-                }
-            }
-            if (i > 2) {
-                System.out.println("Congratulations, " + userName + "!");
-            }
+            Game3.Create(generateController, scanner, userName);
+        } else if (numGame == 4) {
+            Game4.Create(generateController, scanner, userName);
         }
     }
     
