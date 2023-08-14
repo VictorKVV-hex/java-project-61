@@ -4,3 +4,5 @@
 https://asciinema.org/a/pIp05EBJVWcBeiHn59Ejniohr
 
 https://asciinema.org/a/U0mvEGNogr5ugcxJ12dlxOV7L
+
+cd /mnt/d/VICTOR/HEXLET/java-project-61
