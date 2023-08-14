@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.GenerateController;
 import hexlet.code.GenerateRandomInt;
-import hexlet.code.GenerateRandomOperand;
 
 import java.util.Scanner;
 
