@@ -14,8 +14,8 @@ public class Game4 {
         int i;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (i = 0; i < 3; i++) {
-            rNumber1 = generateController.Generate(new GenerateRandomInt());
-            rNumber2 = generateController.Generate(new GenerateRandomInt());
+            rNumber1 = generateController.Generate(new GenerateRandomInt(), 0,100);
+            rNumber2 = generateController.Generate(new GenerateRandomInt(), 0,100);
             rExpression = rNumber1 + " " + rNumber2;
             System.out.println("Question: " + rExpression);
             System.out.print("Your answer: ");

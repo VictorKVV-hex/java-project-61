@@ -11,7 +11,7 @@ public class Game2 {
         int i;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
-            rNumber = generateController.Generate(new GenerateRandomInt());
+            rNumber = generateController.Generate(new GenerateRandomInt(), 0,100);
             String isEven = (rNumber % 2 == 0) ? "yes" : "no";
             System.out.println("Question: " + rNumber);
             System.out.print("Your answer: ");

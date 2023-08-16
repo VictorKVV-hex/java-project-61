@@ -10,6 +10,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         System.out.println("Your choice: ");
         String choice = scanner.next();
@@ -22,6 +23,8 @@ public class App {
             engine.rG(3);
         } else if (choice.equals("4")) {
             engine.rG(4);
+        } else if (choice.equals("5")) {
+            engine.rG(5);
         }
         scanner.close();
 //        Cli.greating();

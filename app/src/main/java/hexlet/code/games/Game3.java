@@ -16,9 +16,9 @@ public class Game3 {
         int i;
         System.out.println("What is the result of the expression?");
         for (i = 0; i < 3; i++) {
-            rNumber1 = generateController.Generate(new GenerateRandomInt());
-            rNumber2 = generateController.Generate(new GenerateRandomInt());
-            rOperand = generateController.Generate(new GenerateRandomOperand());
+            rNumber1 = generateController.Generate(new GenerateRandomInt(), 0,100);
+            rNumber2 = generateController.Generate(new GenerateRandomInt(), 0,100);
+            rOperand = generateController.Generate(new GenerateRandomOperand(), 0,100);
 //                rOperand = "-";
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
             switch (rOperand) {

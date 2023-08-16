@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Game2;
 import hexlet.code.games.Game3;
 import hexlet.code.games.Game4;
+import hexlet.code.games.Game5;
 
 import java.util.Scanner;
 
@@ -40,6 +41,8 @@ public class Engine {
             Game3.Create(generateController, scanner, userName);
         } else if (numGame == 4) {
             Game4.Create(generateController, scanner, userName);
+        } else if (numGame == 5) {
+            Game5.Create(generateController, scanner, userName);
         }
     }
     
