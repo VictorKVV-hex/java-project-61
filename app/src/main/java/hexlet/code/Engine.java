@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Game2;
-import hexlet.code.games.Game3;
-import hexlet.code.games.Game4;
-import hexlet.code.games.Game5;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -34,16 +31,17 @@ public class Engine {
         }
         return question;
     }
-    public void bodyGame(int numGame,GenerateController generateController, Scanner scanner){
+    public void bodyGame(int numGame, GenerateController generateController, Scanner scanner) {
         if (numGame == 2) {
-            Game2.Create(generateController, scanner, userName);
+            Game2.create(generateController, scanner, userName);
         } else if (numGame == 3) {
-            Game3.Create(generateController, scanner, userName);
+            Game3.create(generateController, scanner, userName);
         } else if (numGame == 4) {
-            Game4.Create(generateController, scanner, userName);
+            Game4.create(generateController, scanner, userName);
         } else if (numGame == 5) {
-            Game5.Create(generateController, scanner, userName);
+            Game5.create(generateController, scanner, userName);
+        } else if (numGame == 6) {
+            Game6.create(generateController, scanner, userName);
         }
     }
-    
 }

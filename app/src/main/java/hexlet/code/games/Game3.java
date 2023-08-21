@@ -7,7 +7,7 @@ import hexlet.code.GenerateRandomOperand;
 import java.util.Scanner;
 
 public class Game3 {
-    public static void Create(GenerateController generateController, Scanner scanner, String userName){
+    public static void create(GenerateController generateController, Scanner scanner, String userName) {
         int rNumber1 = 0;
         int rNumber2 = 0;
         String rOperand = "";
@@ -16,9 +16,9 @@ public class Game3 {
         int i;
         System.out.println("What is the result of the expression?");
         for (i = 0; i < 3; i++) {
-            rNumber1 = generateController.Generate(new GenerateRandomInt(), 0,100);
-            rNumber2 = generateController.Generate(new GenerateRandomInt(), 0,100);
-            rOperand = generateController.Generate(new GenerateRandomOperand(), 0,100);
+            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
+            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
+            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);
 //                rOperand = "-";
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
             switch (rOperand) {
@@ -28,6 +28,7 @@ public class Game3 {
                     break;
                 case "*": progAns = rNumber1 * rNumber2;
                     break;
+                default: progAns = rNumber1 + rNumber2;
             }
             System.out.println("Question: " + rExpression);
             System.out.print("Your answer: ");
