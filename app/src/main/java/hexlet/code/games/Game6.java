@@ -9,6 +9,7 @@ public class Game6 {
     public static void create(GenerateController generateController, Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
+        int a;
         String isPrime = "yes";
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
