@@ -16,7 +16,7 @@ public class Game5 {
         int a = 0;
         int d = 0;
         String numTwoPoints = "";
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        System.out.println("What number is missing in the progression?");
         for (i = 0; i < 3; i++) {
             rStart = generateController.generate(new GenerateRandomInt(), 0, 5);
             rStop = generateController.generate(new GenerateRandomInt(), rStart + 5, 15);
@@ -33,7 +33,8 @@ public class Game5 {
                 }
                 a = aPlusOne;
             }
-            System.out.println("Question: " + Arrays.toString(massP));
+//            System.out.println("Question: " + Arrays.toString(massP));
+            System.out.println("Question: " + String.join(" ", massP));
             Arrays.fill(massP, null);
             System.out.print("Your answer: ");
             String answer = scanner.next();
