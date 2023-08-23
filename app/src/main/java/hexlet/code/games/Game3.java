@@ -1,13 +1,12 @@
 package hexlet.code.games;
 
-import hexlet.code.GenerateController;
 import hexlet.code.GenerateRandomInt;
 import hexlet.code.GenerateRandomOperand;
 
 import java.util.Scanner;
 
 public class Game3 {
-    public static void create(GenerateController generateController, Scanner scanner, String userName) {
+    public static void create(Scanner scanner, String userName) {
         int rNumber1 = 0;
         int rNumber2 = 0;
         String rOperand = "";
@@ -16,9 +15,12 @@ public class Game3 {
         int i;
         System.out.println("What is the result of the expression?");
         for (i = 0; i < 3; i++) {
-            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
-            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
-            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);
+//            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
+//            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
+//            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);
+            rNumber1 = GenerateRandomInt.generate(0, 100);
+            rNumber2 = GenerateRandomInt.generate(0, 100);
+            rOperand = GenerateRandomOperand.generate(0, 100);
 //                rOperand = "-";
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
             switch (rOperand) {

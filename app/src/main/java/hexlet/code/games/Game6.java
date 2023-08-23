@@ -1,19 +1,19 @@
 package hexlet.code.games;
 
-import hexlet.code.GenerateController;
 import hexlet.code.GenerateRandomInt;
 
 import java.util.Scanner;
 
 public class Game6 {
-    public static void create(GenerateController generateController, Scanner scanner, String userName) {
+    public static void create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
         int a;
         String isPrime = "yes";
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
-            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
+//            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
+            rNumber = GenerateRandomInt.generate(0, 100);
             isPrime = "yes";
             if (rNumber < 2) {
                 isPrime = "no";

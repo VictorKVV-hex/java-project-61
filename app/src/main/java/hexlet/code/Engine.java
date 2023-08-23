@@ -18,8 +18,8 @@ public class Engine {
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 //        System.out.println(getStrMainQuestion(numGame));  // Вопрос игры.
-        GenerateController generateController = new GenerateController();
-        bodyGame(numGame, generateController, scanner);
+//        GenerateController generateController = new GenerateController();
+        bodyGame(numGame, scanner);
     }
 
     public String getStrMainQuestion(int numGame) {
@@ -31,17 +31,17 @@ public class Engine {
         }
         return question;
     }
-    public void bodyGame(int numGame, GenerateController generateController, Scanner scanner) {
+    public void bodyGame(int numGame, Scanner scanner) {
         if (numGame == 2) {
-            Game2.create(generateController, scanner, userName);
+            Game2.create(scanner, userName);
         } else if (numGame == 3) {
-            Game3.create(generateController, scanner, userName);
+            Game3.create(scanner, userName);
         } else if (numGame == 4) {
-            Game4.create(generateController, scanner, userName);
+            Game4.create(scanner, userName);
         } else if (numGame == 5) {
-            Game5.create(generateController, scanner, userName);
+            Game5.create(scanner, userName);
         } else if (numGame == 6) {
-            Game6.create(generateController, scanner, userName);
+            Game6.create(scanner, userName);
         }
     }
 }
