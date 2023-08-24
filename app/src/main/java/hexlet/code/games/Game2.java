@@ -8,8 +8,8 @@ public class Game2 {
     public static void create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
-        int rGs = 0;  // Начальное значение генератора чисел
-        int rGp = 100; // Конечное значение генератора чисел
+        int rGs = 0;  // Start number
+        int rGp = 100; // End number
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);

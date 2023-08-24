@@ -8,8 +8,8 @@ public class Game6 {
     public static void create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
-        int rGs = 0;  // Начальное значение генератора чисел
-        int rGp = 100; // Конечное значение генератора чисел
+        int rGs = 0;
+        int rGp = 100;
         String isPrime = "yes";
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {

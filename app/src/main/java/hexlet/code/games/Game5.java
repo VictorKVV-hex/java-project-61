@@ -15,8 +15,8 @@ public class Game5 {
         int a = 0;
         int d = 0;
         String numTwoPoints = "";
-        int rGs = 0;  // Начальное значение генератора чисел
-        int rGp = 5; // Конечное значение генератора чисел
+        int rGs = 0;
+        int rGp = 5;
         System.out.println("What number is missing in the progression?");
         for (i = 0; i < 3; i++) {
 //            rStart = generateController.generate(new GenerateRandomInt(), 0, 5);
