@@ -11,12 +11,14 @@ public class Game4 {
         String rExpression = "";
         int progAns = 1;
         int i;
+	int rGs = 0;  // Начальное значение генератора чисел
+	int rGp = 100; // Конечное значение генератора чисел
         System.out.println("Find the greatest common divisor of given numbers.");
         for (i = 0; i < 3; i++) {
 //            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
 //            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
-            rNumber1 = GenerateRandomInt.generate(0, 100);
-            rNumber2 = GenerateRandomInt.generate(0, 100);
+            rNumber1 = GenerateRandomInt.generate(rGs, rGp);
+            rNumber2 = GenerateRandomInt.generate(rGs, rGp);
             rExpression = rNumber1 + " " + rNumber2;
             System.out.println("Question: " + rExpression);
             System.out.print("Your answer: ");
