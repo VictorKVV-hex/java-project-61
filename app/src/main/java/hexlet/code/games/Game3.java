@@ -13,16 +13,16 @@ public class Game3 {
         String rExpression = "";
         int progAns = 0;
         int i;
-	int rGs = 0;  // Начальное значение генератора чисел
-	int rGp = 100; // Конечное значение генератора чисел
+        int rGs = 0;  // Начальное значение генератора чисел
+        int rGp = 100; // Конечное значение генератора чисел
         System.out.println("What is the result of the expression?");
         for (i = 0; i < 3; i++) {
-//            rNumber1 = generateController.generate(new GenerateRandomInt(), rGs, rGp);
-//            rNumber2 = generateController.generate(new GenerateRandomInt(), rGs, rGp);
-//            rOperand = generateController.generate(new GenerateRandomOperand(), rGs, rGp);
-            rNumber1 = GenerateRandomInt.generate( rGs, rGp);
-            rNumber2 = GenerateRandomInt.generate( rGs, rGp);
-            rOperand = GenerateRandomOperand.generate( rGs, rGp);
+//            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
+//            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
+//            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);
+            rNumber1 = GenerateRandomInt.generate(rGs, rGp);
+            rNumber2 = GenerateRandomInt.generate(rGs, rGp);
+            rOperand = GenerateRandomOperand.generate(rGs, rGp);
 //                rOperand = "-";
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
             switch (rOperand) {
