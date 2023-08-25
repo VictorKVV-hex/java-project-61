@@ -8,7 +8,7 @@ public class Game2 {
     public static void create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
-        final int startNumber = 0;  // Start number
+        int startNumber = 0;  // Start number
         final int  stopNumber = 100; // End number
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
