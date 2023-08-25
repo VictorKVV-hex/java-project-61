@@ -11,7 +11,7 @@ public class Game4 {
         String rExpression = "";
         int progAns = 1;
         int i;
-        final int rGs = 0;
+        final int rGs = 1;
         final int rGp = 100;
         final int countOfGame = 3;
         System.out.println("Find the greatest common divisor of given numbers.");
