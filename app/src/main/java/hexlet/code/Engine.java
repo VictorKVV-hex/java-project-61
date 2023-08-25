@@ -13,11 +13,11 @@ public class Engine {
 //    static int rNumber = 0;
 //    static Scanner scanner;
 //    static int i;
-    static final int gameEven = 2;
-    static final int gameCalc = 3;
-    static final int gameGCD = 4;
-    static final int gameProgression = 5;
-    static final int gamePrime = 6;
+    static final int GAME_EVEN = 2;
+    static final int GAME_CALC = 3;
+    static final int GAME_GCD = 4;
+    static final int GAME_PROGRESSION = 5;
+    static final int GAME_PRIME = 6;
 
     public static String getUserName() {
         return userName;
@@ -51,15 +51,15 @@ public class Engine {
 //        return question;
 //    }
     public static void bodyGame(int numGame, Scanner scanner) {
-        if (numGame == gameEven) {
+        if (numGame == GAME_EVEN) {
             Game2.create(scanner, getUserName());
-        } else if (numGame == gameCalc) {
+        } else if (numGame == GAME_CALC) {
             Game3.create(scanner, getUserName());
-        } else if (numGame == gameGCD) {
+        } else if (numGame == GAME_GCD) {
             Game4.create(scanner, getUserName());
-        } else if (numGame == gameProgression) {
+        } else if (numGame == GAME_PROGRESSION) {
             Game5.create(scanner, getUserName());
-        } else if (numGame == gamePrime) {
+        } else if (numGame == GAME_PRIME) {
             Game6.create(scanner, getUserName());
         }
     }
