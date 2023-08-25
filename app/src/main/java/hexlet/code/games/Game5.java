@@ -15,8 +15,8 @@ public class Game5 {
         int a = 0;
         int d = 0;
         String numTwoPoints = "";
-        int rGs = 0;
-        int rGp = 5;
+        final int rGs = 0;
+        final int rGp = 5;
         System.out.println("What number is missing in the progression?");
         for (i = 0; i < 3; i++) {
 //            rStart = generateController.generate(new GenerateRandomInt(), 0, 5);
@@ -24,13 +24,13 @@ public class Game5 {
 //            rTwoPoints = generateController.generate(new GenerateRandomInt(), rStart, rStop);
 //            d = generateController.generate(new GenerateRandomInt(), 1, 5);
             rStart = GenerateRandomInt.generate(rGs, rGp);
-            rGs = rStart + 5;
-            rGp = 15;
-            rStop = GenerateRandomInt.generate(rGs, rGp);
+            final int rGs1 = rStart + 5;
+            final int rGp1 = 15;
+            rStop = GenerateRandomInt.generate(rGs1, rGp1);
             rTwoPoints = GenerateRandomInt.generate(rStart, rStop);
-            rGs = 1;
-            rGp = 5;
-            d = GenerateRandomInt.generate(rGs, rGp);
+            final int rGs2 = 1;
+            final int rGp2 = 5;
+            d = GenerateRandomInt.generate(rGs2, rGp2);
             String[] massP = new String[rStop];
             a = rStart;
             for (int p = 0; p < rStop; p++) {

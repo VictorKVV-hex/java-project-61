@@ -11,8 +11,8 @@ public class Game4 {
         String rExpression = "";
         int progAns = 1;
         int i;
-        int rGs = 0;
-        int rGp = 100;
+        final int rGs = 0;
+        final int rGp = 100;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (i = 0; i < 3; i++) {
 //            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);

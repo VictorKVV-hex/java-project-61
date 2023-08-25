@@ -13,8 +13,8 @@ public class Game3 {
         String rExpression = "";
         int progAns = 0;
         int i;
-        int rGs = 0;  // Start number
-        int rGp = 100; // End number
+        final int rGs = 0;  // Start number
+        final int rGp = 100; // End number
         System.out.println("What is the result of the expression?");
         for (i = 0; i < 3; i++) {
 //            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
