@@ -15,8 +15,9 @@ public class Game3 {
         int i;
         final int rGs = 0;  // Start number
         final int rGp = 100; // End number
+        final int countOfGame = 3;
         System.out.println("What is the result of the expression?");
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < countOfGame; i++) {
 //            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
 //            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
 //            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);

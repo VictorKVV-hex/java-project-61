@@ -17,8 +17,9 @@ public class Game5 {
         String numTwoPoints = "";
         final int rGs = 0;
         final int rGp = 5;
+        final int countOfGame = 3;
         System.out.println("What number is missing in the progression?");
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < countOfGame; i++) {
 //            rStart = generateController.generate(new GenerateRandomInt(), 0, 5);
 //            rStop = generateController.generate(new GenerateRandomInt(), rStart + 5, 15);
 //            rTwoPoints = generateController.generate(new GenerateRandomInt(), rStart, rStop);

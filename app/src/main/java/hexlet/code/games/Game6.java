@@ -10,9 +10,10 @@ public class Game6 {
         int i;
         final int rGs = 0;
         final int rGp = 100;
+        final int countOfGame = 3;
         String isPrime = "yes";
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < countOfGame; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
             rNumber = GenerateRandomInt.generate(rGs, rGp);
             isPrime = "yes";

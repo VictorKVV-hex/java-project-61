@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Game2;
+import hexlet.code.games.Game3;
+import hexlet.code.games.Game4;
+import hexlet.code.games.Game5;
+import hexlet.code.games.Game6;
 
 import java.util.Scanner;
 
@@ -9,6 +13,11 @@ public class Engine {
 //    static int rNumber = 0;
 //    static Scanner scanner;
 //    static int i;
+    static final int numGame2 = 2;
+    static final int numGame3 = 3;
+    static final int numGame4 = 4;
+    static final int numGame5 = 5;
+    static final int numGame6 = 6;
     static String userName;
 
     public static void rG(int numGame) {
@@ -32,15 +41,15 @@ public class Engine {
 //        return question;
 //    }
     public static void bodyGame(int numGame, Scanner scanner) {
-        if (numGame == 2) {
+        if (numGame == numGame2) {
             Game2.create(scanner, userName);
-        } else if (numGame == 3) {
+        } else if (numGame == numGame3) {
             Game3.create(scanner, userName);
-        } else if (numGame == 4) {
+        } else if (numGame == numGame4) {
             Game4.create(scanner, userName);
-        } else if (numGame == 5) {
+        } else if (numGame == numGame5) {
             Game5.create(scanner, userName);
-        } else if (numGame == 6) {
+        } else if (numGame == numGame6) {
             Game6.create(scanner, userName);
         }
     }
