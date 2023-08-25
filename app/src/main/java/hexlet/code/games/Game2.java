@@ -9,11 +9,12 @@ public class Game2 {
         int rNumber = 0;
         int i;
         int startNumber = 0;  // Start number
-        int stopNumber = 100; // End number
+        int stopNumber; // End number
+        stopNumber = 100;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
-            rNumber = GenerateRandomInt.generate(startNumber, StopNumber);
+            rNumber = GenerateRandomInt.generate(startNumber, stopNumber);
             String isEven = (rNumber % 2 == 0) ? "yes" : "no";
             System.out.println("Question: " + rNumber);
             System.out.print("Your answer: ");
