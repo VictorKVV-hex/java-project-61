@@ -9,7 +9,7 @@ public class Game2 {
         int rNumber = 0;
         int i;
         int startNumber = 0;  // Start number
-        int StopNumber = 100; // End number
+        int stopNumber = 100; // End number
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
