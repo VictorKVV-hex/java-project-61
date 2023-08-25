@@ -23,8 +23,8 @@ public class Engine {
         return userName;
     }
 
-    public static void setUserName(String userName) {
-        Engine.userName = userName;
+    public static void setUserName(String userName2) {
+        Engine.userName = userName2;
     }
 
     private static String userName;
