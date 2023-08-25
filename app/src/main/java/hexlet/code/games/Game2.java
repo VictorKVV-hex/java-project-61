@@ -8,12 +8,12 @@ public class Game2 {
     public static void create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
-        int rGs = 0;  // Start number
-        int rGp = 100; // End number
+        int startNumber = 0;  // Start number
+        int StopNumber = 100; // End number
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < 3; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
-            rNumber = GenerateRandomInt.generate(rGs, rGp);
+            rNumber = GenerateRandomInt.generate(startNumber, StopNumber);
             String isEven = (rNumber % 2 == 0) ? "yes" : "no";
             System.out.println("Question: " + rNumber);
             System.out.print("Your answer: ");
