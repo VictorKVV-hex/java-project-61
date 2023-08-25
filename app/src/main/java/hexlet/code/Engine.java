@@ -9,9 +9,9 @@ public class Engine {
 //    static int rNumber = 0;
 //    static Scanner scanner;
 //    static int i;
-    String userName;
+    static String userName;
 
-    public void rG(int numGame) {
+    public static void rG(int numGame) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -22,16 +22,16 @@ public class Engine {
         bodyGame(numGame, scanner);
     }
 
-    public String getStrMainQuestion(int numGame) {
-        String question = "";
-        if (numGame == 2) {
-            question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        } else if (numGame == 3) {
-            question = "What is the result of the expression?";
-        }
-        return question;
-    }
-    public void bodyGame(int numGame, Scanner scanner) {
+//    public String getStrMainQuestion(int numGame) {
+//        String question = "";
+//        if (numGame == 2) {
+//            question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+//        } else if (numGame == 3) {
+//            question = "What is the result of the expression?";
+//        }
+//        return question;
+//    }
+    public static void bodyGame(int numGame, Scanner scanner) {
         if (numGame == 2) {
             Game2.create(scanner, userName);
         } else if (numGame == 3) {

@@ -20,25 +20,25 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("Your choice: ");
         String choice = scanner.next();
-        Engine engine = new Engine();
+//        Engine engine = new Engine();
         switch (choice) {
             case "1":
                 Cli.greating();
                 break;
             case  "2":
-                engine.rG(numGame2);
+                Engine.rG(numGame2);
                 break;
             case  "3":
-                engine.rG(numGame3);
+                Engine.rG(numGame3);
                 break;
             case  "4":
-                engine.rG(numGame4);
+                Engine.rG(numGame4);
                 break;
             case  "5":
-                engine.rG(numGame5);
+                Engine.rG(numGame5);
                 break;
             case  "6":
-                engine.rG(numGame6);
+                Engine.rG(numGame6);
                 break;
             default:
                 break;
