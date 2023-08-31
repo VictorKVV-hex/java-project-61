@@ -5,13 +5,14 @@ import hexlet.code.GenerateRandomInt;
 import java.util.Scanner;
 
 public class Game2 {
-    public static void create(Scanner scanner, String userName) {
+    public static String[][] create(Scanner scanner, String userName) {
         int rNumber = 0;
         int i;
         int startNumber = 0;  // Start number
         final int  stopNumber = 100; // End number
         final int countOfGame = 3;
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        String[][] rezGame = new String[3][2];
+//        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (i = 0; i < countOfGame; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);
             rNumber = GenerateRandomInt.generate(startNumber, stopNumber);
@@ -19,17 +20,20 @@ public class Game2 {
             System.out.println("Question: " + rNumber);
             System.out.print("Your answer: ");
             String answer = scanner.next();
-            if (isEven.equals(answer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + isEven + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-                break;
-            }
+            rezGame[i][0] = String.valueOf(rNumber);
+            rezGame[i][1] = answer;
+//            if (isEven.equals(answer)) {
+//                System.out.println("Correct!");
+//            } else {
+//                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + isEven + "'.");
+//                System.out.println("Let's try again, " + userName + "!");
+//                break;
+//            }
         }
-        if (i > 2) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+//        if (i > 2) {
+//            System.out.println("Congratulations, " + userName + "!");
+//        }
+        return rezGame;
     }
 
 }

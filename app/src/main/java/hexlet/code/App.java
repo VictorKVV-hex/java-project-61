@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.Game2;
+
 import java.util.Scanner;
 
 public class App {
@@ -26,7 +28,8 @@ public class App {
                 Cli.greating();
                 break;
             case  "2":
-                Engine.rG(numGame2);
+//                Engine.rG(numGame2);
+                Engine.GoGame(2,Game2.create(scanner, "Vic"));
                 break;
             case  "3":
                 Engine.rG(numGame3);

@@ -29,6 +29,18 @@ public class Engine {
 
     private static String userName;
 
+    public static void GoGame(int numGame, String[][] rezGame) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        Engine.setUserName(scanner.next());
+        System.out.println("Hello, " + getUserName() + "!");
+        System.out.println(Engine.getStrMainQuestion(numGame));
+        for(int i = 0; i < 3; i++){
+            
+        }
+    }
+
     public static void rG(int numGame) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -41,15 +53,29 @@ public class Engine {
         bodyGame(numGame, scanner);
     }
 
-//    public String getStrMainQuestion(int numGame) {
-//        String question = "";
-//        if (numGame == 2) {
-//            question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-//        } else if (numGame == 3) {
-//            question = "What is the result of the expression?";
-//        }
-//        return question;
-//    }
+    public static String getStrMainQuestion(int numGame) {
+        String question = "";
+        switch (numGame) {
+            case  2:
+                question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+                break;
+            case  3:
+                question = "What is the result of the expression?";
+                break;
+            case  4:
+                question = "Find the greatest common divisor of given numbers.";
+                break;
+            case  5:
+                question = "What number is missing in the progression?";
+                break;
+            case  6:
+                question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+                break;
+            default:
+                break;
+        }
+        return question;
+    }
     public static void bodyGame(int numGame, Scanner scanner) {
         if (numGame == GAME_EVEN) {
             Game2.create(scanner, getUserName());
