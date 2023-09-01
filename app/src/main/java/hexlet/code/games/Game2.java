@@ -11,7 +11,9 @@ public class Game2 {
         int startNumber = 0;  // Start number
         final int  stopNumber = 100; // End number
         final int countOfGame = 3;
-        String[][] rezGame = new String[3][2];
+        final int m1 = 3;
+        final int m2 = 2;
+        String[][] rezGame = new String[m1][m2];
         for (i = 0; i < countOfGame; i++) {
             rNumber = GenerateRandomInt.generate(startNumber, stopNumber);
             String isEven = (rNumber % 2 == 0) ? "yes" : "no";

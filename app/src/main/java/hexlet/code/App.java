@@ -31,19 +31,19 @@ public class App {
                 Cli.greating();
                 break;
             case  "2":
-                Engine.goGame(2, Game2.create());
+                Engine.goGame(numGame2, Game2.create());
                 break;
             case  "3":
-                Engine.goGame(3, Game3.create());
+                Engine.goGame(numGame3, Game3.create());
                 break;
             case  "4":
-                Engine.goGame(4, Game4.create());
+                Engine.goGame(numGame4, Game4.create());
                 break;
             case  "5":
-                Engine.goGame(5, Game5.create());
+                Engine.goGame(numGame5, Game5.create());
                 break;
             case  "6":
-                Engine.goGame(6, Game6.create());
+                Engine.goGame(numGame6, Game6.create());
                 break;
             default:
                 break;

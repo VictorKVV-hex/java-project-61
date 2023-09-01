@@ -7,11 +7,11 @@ public class Engine {
 //    static int rNumber = 0;
 //    static Scanner scanner;
 //    static int i;
-//    static final int GAME_EVEN = 2;
-//    static final int GAME_CALC = 3;
-//    static final int GAME_GCD = 4;
-//    static final int GAME_PROGRESSION = 5;
-//    static final int GAME_PRIME = 6;
+    static final int GAME_EVEN = 2;
+    static final int GAME_CALC = 3;
+    static final int GAME_GCD = 4;
+    static final int GAME_PROGRESSION = 5;
+    static final int GAME_PRIME = 6;
 
     public static String getUserName() {
         return userName;
@@ -31,7 +31,8 @@ public class Engine {
         Engine.setUserName(scanner.next());
         System.out.println("Hello, " + getUserName() + "!");
         System.out.println(Engine.getStrMainQuestion(numGame));
-        for (i = 0; i < 3; i++) {
+        final int countOfGame = 3;
+        for (i = 0; i < countOfGame; i++) {
             String sQuestion = rezGame[i][0];
             String answerGame = rezGame[i][1];
             System.out.println("Question: " + sQuestion);
@@ -65,19 +66,19 @@ public class Engine {
     public static String getStrMainQuestion(int numGame) {
         String question = "";
         switch (numGame) {
-            case  2:
+            case  GAME_EVEN:
                 question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
                 break;
-            case  3:
+            case  GAME_CALC:
                 question = "What is the result of the expression?";
                 break;
-            case  4:
+            case  GAME_GCD:
                 question = "Find the greatest common divisor of given numbers.";
                 break;
-            case  5:
+            case  GAME_PROGRESSION:
                 question = "What number is missing in the progression?";
                 break;
-            case  6:
+            case  GAME_PRIME:
                 question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
                 break;
             default:

@@ -16,7 +16,9 @@ public class Game3 {
         final int rGs = 0;  // Start number
         final int rGp = 100; // End number
         final int countOfGame = 3;
-        String[][] rezGame = new String[3][2];
+        final int m1 = 3;
+        final int m2 = 2;
+        String[][] rezGame = new String[m1][m2];
 //        System.out.println("What is the result of the expression?");
         for (i = 0; i < countOfGame; i++) {
             rNumber1 = GenerateRandomInt.generate(rGs, rGp);

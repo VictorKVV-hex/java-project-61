@@ -12,7 +12,9 @@ public class Game6 {
         final int rGp = 100;
         final int countOfGame = 3;
         String isPrime = "yes";
-        String[][] rezGame = new String[3][2];
+        final int m1 = 3;
+        final int m2 = 2;
+        String[][] rezGame = new String[m1][m2];
 //        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (i = 0; i < countOfGame; i++) {
 //            rNumber = generateController.generate(new GenerateRandomInt(), 0, 100);

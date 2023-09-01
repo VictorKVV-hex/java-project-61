@@ -18,8 +18,9 @@ public class Game5 {
         final int rGs = 0;
         final int rGp = 5;
         final int countOfGame = 3;
-//        System.out.println("What number is missing in the progression?");
-        String[][] rezGame = new String[3][2];
+        final int m1 = 3;
+        final int m2 = 2;
+        String[][] rezGame = new String[m1][m2];
         for (i = 0; i < countOfGame; i++) {
             rStart = GenerateRandomInt.generate(rGs, rGp);
             final int rGs1 = rStart + 5;
