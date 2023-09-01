@@ -1,6 +1,10 @@
 package hexlet.code;
 
 import hexlet.code.games.Game2;
+import hexlet.code.games.Game3;
+import hexlet.code.games.Game4;
+import hexlet.code.games.Game5;
+import hexlet.code.games.Game6;
 
 import java.util.Scanner;
 
@@ -22,45 +26,28 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("Your choice: ");
         String choice = scanner.next();
-//        Engine engine = new Engine();
         switch (choice) {
             case "1":
                 Cli.greating();
                 break;
             case  "2":
-//                Engine.rG(numGame2);
-                Engine.GoGame(2,Game2.create(scanner, "Vic"));
+                Engine.goGame(2, Game2.create());
                 break;
             case  "3":
-                Engine.rG(numGame3);
+                Engine.goGame(3, Game3.create());
                 break;
             case  "4":
-                Engine.rG(numGame4);
+                Engine.goGame(4, Game4.create());
                 break;
             case  "5":
-                Engine.rG(numGame5);
+                Engine.goGame(5, Game5.create());
                 break;
             case  "6":
-                Engine.rG(numGame6);
+                Engine.goGame(6, Game6.create());
                 break;
             default:
                 break;
         }
-
-//        if (choice.equals("1")) {
-//            Cli.greating();
-//        } else if (choice.equals("2")) {
-//            engine.rG(2);
-//        } else if (choice.equals("3")) {
-//            engine.rG(3);
-//        } else if (choice.equals("4")) {
-//            engine.rG(4);
-//        } else if (choice.equals("5")) {
-//            engine.rG(5);
-//        } else if (choice.equals("6")) {
-//            engine.rG(6);
-//        }
         scanner.close();
-//        Cli.greating();
     }
 }

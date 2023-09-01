@@ -3,10 +3,10 @@ package hexlet.code.games;
 import hexlet.code.GenerateRandomInt;
 import hexlet.code.GenerateRandomOperand;
 
-import java.util.Scanner;
+
 
 public class Game3 {
-    public static void create(Scanner scanner, String userName) {
+    public static String[][] create() {
         int rNumber1 = 0;
         int rNumber2 = 0;
         String rOperand = "";
@@ -16,15 +16,12 @@ public class Game3 {
         final int rGs = 0;  // Start number
         final int rGp = 100; // End number
         final int countOfGame = 3;
-        System.out.println("What is the result of the expression?");
+        String[][] rezGame = new String[3][2];
+//        System.out.println("What is the result of the expression?");
         for (i = 0; i < countOfGame; i++) {
-//            rNumber1 = generateController.generate(new GenerateRandomInt(), 0, 100);
-//            rNumber2 = generateController.generate(new GenerateRandomInt(), 0, 100);
-//            rOperand = generateController.generate(new GenerateRandomOperand(), 0, 100);
             rNumber1 = GenerateRandomInt.generate(rGs, rGp);
             rNumber2 = GenerateRandomInt.generate(rGs, rGp);
             rOperand = GenerateRandomOperand.generate(rGs, rGp);
-//                rOperand = "-";
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
             switch (rOperand) {
                 case "+": progAns = rNumber1 + rNumber2;
@@ -35,19 +32,22 @@ public class Game3 {
                     break;
                 default: progAns = rNumber1 + rNumber2;
             }
-            System.out.println("Question: " + rExpression);
-            System.out.print("Your answer: ");
-            String answer = scanner.next();
-            if (progAns == Integer.parseInt(answer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + progAns + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-                break;
-            }
+            rezGame[i][0] = rExpression;
+            rezGame[i][1] = String.valueOf(progAns);
+//            System.out.println("Question: " + rExpression);
+//            System.out.print("Your answer: ");
+//            String answer = scanner.next();
+//            if (progAns == Integer.parseInt(answer)) {
+//                System.out.println("Correct!");
+//            } else {
+//                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + progAns + "'.");
+//                System.out.println("Let's try again, " + userName + "!");
+//                break;
+//            }
         }
-        if (i > 2) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+//        if (i > 2) {
+//            System.out.println("Congratulations, " + userName + "!");
+//        }
+        return rezGame;
     }
 }
