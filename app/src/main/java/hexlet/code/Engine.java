@@ -3,10 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-//    GenerateController generateController;
-//    static int rNumber = 0;
-//    static Scanner scanner;
-//    static int i;
+
     static final int GAME_EVEN = 2;
     static final int GAME_CALC = 3;
     static final int GAME_GCD = 4;
@@ -51,17 +48,7 @@ public class Engine {
         }
     }
 
-//    public static void rG(int numGame) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Welcome to the Brain Games!");
-//        System.out.print("May I have your name? ");
-////        userName = scanner.next();
-//        Engine.setUserName(scanner.next());
-//        System.out.println("Hello, " + getUserName() + "!");
-////        System.out.println(getStrMainQuestion(numGame));  // Вопрос игры.
-////        GenerateController generateController = new GenerateController();
-//        bodyGame(numGame, scanner);
-//    }
+
 
     public static String getStrMainQuestion(int numGame) {
         String question = "";
@@ -86,17 +73,5 @@ public class Engine {
         }
         return question;
     }
-//    public static void bodyGame(int numGame, Scanner scanner) {
-//        if (numGame == GAME_EVEN) {
-////            Game2.create(scanner, getUserName());
-//        } else if (numGame == GAME_CALC) {
-////            Game3.create(scanner, getUserName());
-//        } else if (numGame == GAME_GCD) {
-////            Game4.create(scanner, getUserName());
-//        } else if (numGame == GAME_PROGRESSION) {
-////            Game5.create(scanner, getUserName());
-//        } else if (numGame == GAME_PRIME) {
-////            Game6.create(scanner, getUserName());
-//        }
-//    }
+
 }

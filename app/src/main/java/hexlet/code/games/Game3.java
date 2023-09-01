@@ -13,8 +13,8 @@ public class Game3 {
         String rExpression = "";
         int progAns = 0;
         int i;
-        final int rGs = 0;  // Start number
-        final int rGp = 100; // End number
+        final int rGs = 0;
+        final int rGp = 100;
         final int countOfGame = 3;
         final int m1 = 3;
         final int m2 = 2;
@@ -36,20 +36,8 @@ public class Game3 {
             }
             rezGame[i][0] = rExpression;
             rezGame[i][1] = String.valueOf(progAns);
-//            System.out.println("Question: " + rExpression);
-//            System.out.print("Your answer: ");
-//            String answer = scanner.next();
-//            if (progAns == Integer.parseInt(answer)) {
-//                System.out.println("Correct!");
-//            } else {
-//                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + progAns + "'.");
-//                System.out.println("Let's try again, " + userName + "!");
-//                break;
-//            }
+
         }
-//        if (i > 2) {
-//            System.out.println("Congratulations, " + userName + "!");
-//        }
         return rezGame;
     }
 }

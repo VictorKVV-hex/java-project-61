@@ -43,21 +43,8 @@ public class Game5 {
             }
             rezGame[i][0] = String.join(" ", massP);
             rezGame[i][1] = String.valueOf(numTwoPoints);
-//            System.out.println("Question: " + String.join(" ", massP));
             Arrays.fill(massP, null);
-//            System.out.print("Your answer: ");
-//            String answer = scanner.next();
-//            if (numTwoPoints.equals(answer)) {
-//                System.out.println("Correct!");
-//            } else {
-//                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + numTwoPoints + "'.");
-//                System.out.println("Let's try again, " + userName + "!");
-//                break;
-//            }
         }
-//        if (i > 2) {
-//            System.out.println("Congratulations, " + userName + "!");
-//        }
         return rezGame;
     }
 }
