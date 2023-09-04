@@ -7,7 +7,15 @@ import java.util.Arrays;
 
 
 public class ProgressionGame {
-    static String numTwoPoints = "";
+    public static String getNumTwoPoints() {
+        return numTwoPoints;
+    }
+
+    public static void setNumTwoPoints(String numTwoPoints) {
+        ProgressionGame.numTwoPoints = numTwoPoints;
+    }
+
+    private static String numTwoPoints = "";
 
     public static void create() {
         int rStart = 0;
@@ -37,7 +45,8 @@ public class ProgressionGame {
             String[] massP = new String[rStop];
             massP = getMassAndPoints(rStart, rStop, d, rTwoPoints, massP);
             rezGame[i][0] = String.join(" ", massP);
-            rezGame[i][1] = String.valueOf(numTwoPoints);
+//            rezGame[i][1] = String.valueOf(numTwoPoints);
+            rezGame[i][1] = String.valueOf(getNumTwoPoints());
             Arrays.fill(massP, null);
         }
         Engine.goGame(rule, rezGame);
@@ -52,7 +61,7 @@ public class ProgressionGame {
             massP[p] = String.valueOf(aPlusOne);
             if (p == rTwoPoints) {
                 massP[p] = "..";
-                numTwoPoints = String.valueOf(aPlusOne);
+                setNumTwoPoints(String.valueOf(aPlusOne));
             }
             a = aPlusOne;
         }
