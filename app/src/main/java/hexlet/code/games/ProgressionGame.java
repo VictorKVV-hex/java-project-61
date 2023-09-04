@@ -11,8 +11,8 @@ public class ProgressionGame {
         return numTwoPoints;
     }
 
-    public static void setNumTwoPoints(String numTwoPoints) {
-        ProgressionGame.numTwoPoints = numTwoPoints;
+    public static void setNumTwoPoints(String numTwoPoints1) {
+        ProgressionGame.numTwoPoints = numTwoPoints1;
     }
 
     private static String numTwoPoints = "";
