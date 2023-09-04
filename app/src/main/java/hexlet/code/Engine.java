@@ -20,14 +20,15 @@ public class Engine {
 
     private static String userName;
 
-    public static void goGame(int numGame, String[][] rezGame) {
+    public static void goGame(String ruls, String[][] rezGame) {
         int i = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Engine.setUserName(scanner.next());
         System.out.println("Hello, " + getUserName() + "!");
-        System.out.println(Engine.getStrMainQuestion(numGame));
+//        System.out.println(Engine.getStrMainQuestion(numGame));
+        System.out.println(ruls);
         final int countOfGame = 3;
         for (i = 0; i < countOfGame; i++) {
             String sQuestion = rezGame[i][0];
@@ -50,28 +51,28 @@ public class Engine {
 
 
 
-    public static String getStrMainQuestion(int numGame) {
-        String question = "";
-        switch (numGame) {
-            case  GAME_EVEN:
-                question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-                break;
-            case  GAME_CALC:
-                question = "What is the result of the expression?";
-                break;
-            case  GAME_GCD:
-                question = "Find the greatest common divisor of given numbers.";
-                break;
-            case  GAME_PROGRESSION:
-                question = "What number is missing in the progression?";
-                break;
-            case  GAME_PRIME:
-                question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-                break;
-            default:
-                break;
-        }
-        return question;
-    }
+//    public static String getStrMainQuestion(int numGame) {
+//        String question = "";
+//        switch (numGame) {
+//            case  GAME_EVEN:
+//                question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+//                break;
+//            case  GAME_CALC:
+//                question = "What is the result of the expression?";
+//                break;
+//            case  GAME_GCD:
+//                question = "Find the greatest common divisor of given numbers.";
+//                break;
+//            case  GAME_PROGRESSION:
+//                question = "What number is missing in the progression?";
+//                break;
+//            case  GAME_PRIME:
+//                question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+//                break;
+//            default:
+//                break;
+//        }
+//        return question;
+//    }
 
 }
