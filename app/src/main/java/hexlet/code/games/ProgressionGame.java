@@ -7,15 +7,7 @@ import java.util.Arrays;
 
 
 public class ProgressionGame {
-//    public static String getNumTwoPoints() {
-//        return numTwoPoints;
-//    }
-//
-//    public static void setNumTwoPoints(String numTwoPoints1) {
-//        ProgressionGame.numTwoPoints = numTwoPoints1;
-//    }
-//
-//    private static String numTwoPoints = "";
+
     static final int R_GSTART = 0;
     static final int R_GSTOP = 5;
     static final int COUNT_OF_GAME = 3;

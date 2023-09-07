@@ -26,7 +26,6 @@ public class EvenGame {
         Engine.goGame(RULE, rezGame);
     }
     public static boolean isEvenF(int rNumber) {
-//        boolean isEven = (rNumber % 2 == 0) ? true : false;
         boolean isEven = rNumber % 2 == 0;
         return isEven;
     }
