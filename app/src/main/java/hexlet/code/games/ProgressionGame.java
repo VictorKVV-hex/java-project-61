@@ -26,15 +26,15 @@ public class ProgressionGame {
         int i;
         int aPlusOne = 0;
         int a = 0;
-        int d = 0;
+        int dStep = 0;
         String[][] rezGame = new String[SIZE_1][SIZE_2];
         for (i = 0; i < COUNT_OF_GAME; i++) {
             rStart = GenerateRandomInt.generate(R_GSTART, R_GSTOP);
             final int rStart1 = rStart + 5;
             rStop = GenerateRandomInt.generate(rStart1, R_STOP_1);
             rTwoPoints = GenerateRandomInt.generate(rStart, rStop);
-            d = GenerateRandomInt.generate(R_START_D, R_STOP_D);
-            String[] massP = getMassAndPoints(rStart, rStop, d);
+            dStep = GenerateRandomInt.generate(R_START_D, R_STOP_D);
+            String[] massP = getMassAndPoints(rStart, rStop, dStep);
             numTwoPoints = massP[rTwoPoints];
             massP[rTwoPoints] = "..";
             rezGame[i][0] = String.join(" ", massP);
