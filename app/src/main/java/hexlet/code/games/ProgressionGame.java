@@ -16,15 +16,15 @@ public class ProgressionGame {
 //    }
 //
 //    private static String numTwoPoints = "";
-    final static int rGstart = 0;
-    final static int rGstop = 5;
-    final static int countOfGame = 3;
-    final static int size1 = 3;
-    final static int size2 = 2;
-    final static String rule = "What number is missing in the progression?";
-    final static int rStop1 = 15;
-    final static int rStartD = 1;
-    final static int rStopD = 5;
+    static final int R_GSTART = 0;
+    static final int R_GSTOP = 5;
+    static final int COUNT_OF_GAME = 3;
+    static final int SIZE_1 = 3;
+    static final int SIZE_2 = 2;
+    static final String RULE = "What number is missing in the progression?";
+    static final int R_STOP_1 = 15;
+    static final int R_START_D = 1;
+    static final int R_STOP_D = 5;
 
     public static void create() {
         String numTwoPoints = "";
@@ -35,13 +35,13 @@ public class ProgressionGame {
         int aPlusOne = 0;
         int a = 0;
         int d = 0;
-        String[][] rezGame = new String[size1][size2];
-        for (i = 0; i < countOfGame; i++) {
-            rStart = GenerateRandomInt.generate(rGstart, rGstop);
+        String[][] rezGame = new String[SIZE_1][SIZE_2];
+        for (i = 0; i < COUNT_OF_GAME; i++) {
+            rStart = GenerateRandomInt.generate(R_GSTART, R_GSTOP);
             final int rStart1 = rStart + 5;
-            rStop = GenerateRandomInt.generate(rStart1, rStop1);
+            rStop = GenerateRandomInt.generate(rStart1, R_STOP_1);
             rTwoPoints = GenerateRandomInt.generate(rStart, rStop);
-            d = GenerateRandomInt.generate(rStartD, rStopD);
+            d = GenerateRandomInt.generate(R_START_D, R_STOP_D);
             String[] massP = getMassAndPoints(rStart, rStop, d);
             numTwoPoints = massP[rTwoPoints];
             massP[rTwoPoints] = "..";
@@ -49,7 +49,7 @@ public class ProgressionGame {
             rezGame[i][1] = numTwoPoints;
             Arrays.fill(massP, null);
         }
-        Engine.goGame(rule, rezGame);
+        Engine.goGame(RULE, rezGame);
     }
 
     public static String[] getMassAndPoints(int rStart, int rStop, int d) {

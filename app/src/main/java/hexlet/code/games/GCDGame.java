@@ -6,12 +6,12 @@ import hexlet.code.GenerateRandomInt;
 
 
 public class GCDGame {
-    final static int rStart = 1;
-    final static int rStop = 100;
-    final static int countOfGame = 3;
-    final static int size1 = 3;
-    final static int size2 = 2;
-    final static String rule = "Find the greatest common divisor of given numbers.";
+    static final int R_START = 1;
+    static final int R_STOP = 100;
+    static final int COUNT_OF_GAME = 3;
+    static final int SIZE_1 = 3;
+    static final int SIZE_2 = 2;
+    static final String RULE = "Find the greatest common divisor of given numbers.";
 
     public static void create() {
         int rNumber1 = 0;
@@ -19,16 +19,16 @@ public class GCDGame {
         String rExpression = "";
         int progAns = 1;
         int i;
-        String[][] rezGame = new String[size1][size2];
-        for (i = 0; i < countOfGame; i++) {
-            rNumber1 = GenerateRandomInt.generate(rStart, rStop);
-            rNumber2 = GenerateRandomInt.generate(rStart, rStop);
+        String[][] rezGame = new String[SIZE_1][SIZE_2];
+        for (i = 0; i < COUNT_OF_GAME; i++) {
+            rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
+            rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
             rExpression = rNumber1 + " " + rNumber2;
             progAns = gCDF(rNumber1, rNumber2);
             rezGame[i][0] = rExpression;
             rezGame[i][1] = String.valueOf(progAns);
         }
-        Engine.goGame(rule, rezGame);
+        Engine.goGame(RULE, rezGame);
     }
 
     public static int gCDF(int nNumber1, int nNumber2) {

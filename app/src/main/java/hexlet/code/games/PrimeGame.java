@@ -6,25 +6,25 @@ import hexlet.code.GenerateRandomInt;
 
 
 public class PrimeGame {
-    final static int rStart = 0;
-    final static int rStop = 100;
-    final static int countOfGame = 3;
-    final static int size1 = 3;
-    final static int size2 = 2;
-    final static String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    static final int R_START = 0;
+    static final int R_STOP = 100;
+    static final int COUNT_OF_GAME = 3;
+    static final int SIZE_1 = 3;
+    static final int SIZE_2 = 2;
+    static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void create() {
         int rNumber = 0;
         int i;
         String isPrime = "yes";
-        String[][] rezGame = new String[size1][size2];
-        for (i = 0; i < countOfGame; i++) {
-            rNumber = GenerateRandomInt.generate(rStart, rStop);
-            isPrime = (isPrimeF(rNumber)) ? "yes": "no";
+        String[][] rezGame = new String[SIZE_1][SIZE_2];
+        for (i = 0; i < COUNT_OF_GAME; i++) {
+            rNumber = GenerateRandomInt.generate(R_START, R_STOP);
+            isPrime = (isPrimeF(rNumber)) ? "yes" : "no";
             rezGame[i][0] = String.valueOf(rNumber);
             rezGame[i][1] = isPrime;
         }
-        Engine.goGame(rule, rezGame);
+        Engine.goGame(RULE, rezGame);
     }
 
     public static boolean isPrimeF(int rNumber) {

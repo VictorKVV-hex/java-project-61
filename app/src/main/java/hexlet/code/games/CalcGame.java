@@ -7,12 +7,12 @@ import java.util.Random;
 
 
 public class CalcGame {
-    final static int rStart = 0;
-    final static int rStop = 100;
-    final static int countOfGame = 3;
-    final static int size1 = 3;
-    final static int size2 = 2;
-    final static String rule = "What is the result of the expression?";
+    static final int R_START = 0;
+    static final int R_STOP = 100;
+    static final int COUNT_OF_GAME = 3;
+    static final int SIZE_1 = 3;
+    static final int SIZE_2 = 2;
+    static final String RULE = "What is the result of the expression?";
 
     public static void create() {
         int rNumber1 = 0;
@@ -21,18 +21,18 @@ public class CalcGame {
         String rExpression = "";
         int progAns = 0;
         int i;
-        String[][] rezGame = new String[size1][size2];
-        for (i = 0; i < countOfGame; i++) {
-            rNumber1 = GenerateRandomInt.generate(rStart, rStop);
-            rNumber2 = GenerateRandomInt.generate(rStart, rStop);
-            rOperand = generateRandomOperand(rStart, rStop);
+        String[][] rezGame = new String[SIZE_1][SIZE_2];
+        for (i = 0; i < COUNT_OF_GAME; i++) {
+            rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
+            rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
+            rOperand = generateRandomOperand(R_START, R_STOP);
             rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
 
             progAns = expression(rOperand, rNumber1, rNumber2);
             rezGame[i][0] = rExpression;
             rezGame[i][1] = String.valueOf(progAns);
         }
-        Engine.goGame(rule, rezGame);
+        Engine.goGame(RULE, rezGame);
     }
 
     public static String generateRandomOperand(int min, int max) {
