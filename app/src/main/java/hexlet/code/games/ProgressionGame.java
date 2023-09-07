@@ -7,17 +7,27 @@ import java.util.Arrays;
 
 
 public class ProgressionGame {
-    public static String getNumTwoPoints() {
-        return numTwoPoints;
-    }
-
-    public static void setNumTwoPoints(String numTwoPoints1) {
-        ProgressionGame.numTwoPoints = numTwoPoints1;
-    }
-
-    private static String numTwoPoints = "";
+//    public static String getNumTwoPoints() {
+//        return numTwoPoints;
+//    }
+//
+//    public static void setNumTwoPoints(String numTwoPoints1) {
+//        ProgressionGame.numTwoPoints = numTwoPoints1;
+//    }
+//
+//    private static String numTwoPoints = "";
+    final static int rGstart = 0;
+    final static int rGstop = 5;
+    final static int countOfGame = 3;
+    final static int size1 = 3;
+    final static int size2 = 2;
+    final static String rule = "What number is missing in the progression?";
+    final static int rStop1 = 15;
+    final static int rStartD = 1;
+    final static int rStopD = 5;
 
     public static void create() {
+        String numTwoPoints = "";
         int rStart = 0;
         int rStop = 0;
         int rTwoPoints = 0;
@@ -25,44 +35,30 @@ public class ProgressionGame {
         int aPlusOne = 0;
         int a = 0;
         int d = 0;
-//        String numTwoPoints = "";
-        final int rGs = 0;
-        final int rGp = 5;
-        final int countOfGame = 3;
-        final int m1 = 3;
-        final int m2 = 2;
-        final String rule = "What number is missing in the progression?";
-        String[][] rezGame = new String[m1][m2];
+        String[][] rezGame = new String[size1][size2];
         for (i = 0; i < countOfGame; i++) {
-            rStart = GenerateRandomInt.generate(rGs, rGp);
-            final int rGs1 = rStart + 5;
-            final int rGp1 = 15;
-            rStop = GenerateRandomInt.generate(rGs1, rGp1);
+            rStart = GenerateRandomInt.generate(rGstart, rGstop);
+            final int rStart1 = rStart + 5;
+            rStop = GenerateRandomInt.generate(rStart1, rStop1);
             rTwoPoints = GenerateRandomInt.generate(rStart, rStop);
-            final int rGs2 = 1;
-            final int rGp2 = 5;
-            d = GenerateRandomInt.generate(rGs2, rGp2);
-            String[] massP = new String[rStop];
-            massP = getMassAndPoints(rStart, rStop, d, rTwoPoints, massP);
+            d = GenerateRandomInt.generate(rStartD, rStopD);
+            String[] massP = getMassAndPoints(rStart, rStop, d);
+            numTwoPoints = massP[rTwoPoints];
+            massP[rTwoPoints] = "..";
             rezGame[i][0] = String.join(" ", massP);
-//            rezGame[i][1] = String.valueOf(numTwoPoints);
-            rezGame[i][1] = String.valueOf(getNumTwoPoints());
+            rezGame[i][1] = numTwoPoints;
             Arrays.fill(massP, null);
         }
         Engine.goGame(rule, rezGame);
     }
 
-    public static String[] getMassAndPoints(int rStart, int rStop, int d, int rTwoPoints, String[] massP) {
+    public static String[] getMassAndPoints(int rStart, int rStop, int d) {
         int aPlusOne = 0;
         int a = rStart;
-
+        String[] massP = new String[rStop];
         for (int p = 0; p < rStop; p++) {
             aPlusOne = a + d;
             massP[p] = String.valueOf(aPlusOne);
-            if (p == rTwoPoints) {
-                massP[p] = "..";
-                setNumTwoPoints(String.valueOf(aPlusOne));
-            }
             a = aPlusOne;
         }
         return massP;

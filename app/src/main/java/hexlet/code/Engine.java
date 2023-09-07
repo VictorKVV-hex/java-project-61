@@ -4,23 +4,14 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static String getUserName() {
-        return userName;
-    }
-
-    public static void setUserName(String userName2) {
-        Engine.userName = userName2;
-    }
-
-    private static String userName;
-
     public static void goGame(String rule, String[][] rezGame) {
         int i = 0;
+        String userName;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        Engine.setUserName(scanner.next());
-        System.out.println("Hello, " + getUserName() + "!");
+        userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
         System.out.println(rule);
         final int countOfGame = 3;
         for (i = 0; i < countOfGame; i++) {

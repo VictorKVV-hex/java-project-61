@@ -5,8 +5,6 @@ import java.util.Random;
 public class GenerateRandomInt {
 
     public static int generate(int min, int max) {
-        Random r = new Random();
-        int digit = r.nextInt(max - min) + min;
-        return digit;
+        return new Random().nextInt(max - min) + min;
     }
 }

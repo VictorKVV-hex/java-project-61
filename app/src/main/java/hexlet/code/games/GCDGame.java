@@ -6,19 +6,20 @@ import hexlet.code.GenerateRandomInt;
 
 
 public class GCDGame {
+    final static int rStart = 1;
+    final static int rStop = 100;
+    final static int countOfGame = 3;
+    final static int size1 = 3;
+    final static int size2 = 2;
+    final static String rule = "Find the greatest common divisor of given numbers.";
+
     public static void create() {
         int rNumber1 = 0;
         int rNumber2 = 0;
         String rExpression = "";
         int progAns = 1;
         int i;
-        final int rStart = 1;
-        final int rStop = 100;
-        final int countOfGame = 3;
-        final int m1 = 3;
-        final int m2 = 2;
-        final String rule = "Find the greatest common divisor of given numbers.";
-        String[][] rezGame = new String[m1][m2];
+        String[][] rezGame = new String[size1][size2];
         for (i = 0; i < countOfGame; i++) {
             rNumber1 = GenerateRandomInt.generate(rStart, rStop);
             rNumber2 = GenerateRandomInt.generate(rStart, rStop);
