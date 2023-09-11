@@ -19,7 +19,6 @@ public class ProgressionGame {
     private static final int R_STOP_D = 5;
 
     public static void create() {
-        String numTwoPoints = "";
         String[][] rezGame = new String[SIZE_1][SIZE_2];
         for (int i = 0; i < COUNT_OF_GAME; i++) {
             int rStart = GenerateRandomInt.generate(R_GSTART, R_GSTOP);
@@ -28,7 +27,7 @@ public class ProgressionGame {
             int rTwoPoints = GenerateRandomInt.generate(rStart, rStop);
             int dStep = GenerateRandomInt.generate(R_START_D, R_STOP_D);
             String[] massP = getMassAndPoints(rStart, rStop, dStep);
-            numTwoPoints = massP[rTwoPoints];
+            String numTwoPoints = massP[rTwoPoints];
             massP[rTwoPoints] = "..";
             rezGame[i][0] = String.join(" ", massP);
             rezGame[i][1] = numTwoPoints;

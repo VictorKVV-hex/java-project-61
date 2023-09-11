@@ -14,11 +14,10 @@ public class PrimeGame {
     private static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void create() {
-        String isPrime = "yes";
         String[][] rezGame = new String[SIZE_1][SIZE_2];
         for (int i = 0; i < COUNT_OF_GAME; i++) {
             int rNumber = GenerateRandomInt.generate(R_START, R_STOP);
-            isPrime = (isPrimeF(rNumber)) ? "yes" : "no";
+            String isPrime = (isPrimeF(rNumber)) ? "yes" : "no";
             rezGame[i][0] = String.valueOf(rNumber);
             rezGame[i][1] = isPrime;
         }
