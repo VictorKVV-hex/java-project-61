@@ -6,19 +6,17 @@ import hexlet.code.GenerateRandomInt;
 
 
 public class EvenGame {
-    static final int START_NUMBER = 0;
-    static final int STOP_NUMBER = 100;
-    static final int COUNT_OF_GAME = 3;
-    static final int SIZE_1 = 3;
-    static final int SIZE_2 = 2;
-    static final String RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int START_NUMBER = 0;
+    private static final int STOP_NUMBER = 100;
+    private static final int COUNT_OF_GAME = 3;
+    private static final int SIZE_1 = 3;
+    private static final int SIZE_2 = 2;
+    private static final String RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void create() {
-        int rNumber = 0;
-        int i;
         String[][] rezGame = new String[SIZE_1][SIZE_2];
-        for (i = 0; i < COUNT_OF_GAME; i++) {
-            rNumber = GenerateRandomInt.generate(START_NUMBER, STOP_NUMBER);
+        for (int i = 0; i < COUNT_OF_GAME; i++) {
+            int rNumber = GenerateRandomInt.generate(START_NUMBER, STOP_NUMBER);
             String isEven = (isEvenF(rNumber)) ? "yes" : "no";
             rezGame[i][0] = String.valueOf(rNumber);
             rezGame[i][1] = isEven;

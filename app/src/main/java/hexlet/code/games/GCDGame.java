@@ -6,25 +6,20 @@ import hexlet.code.GenerateRandomInt;
 
 
 public class GCDGame {
-    static final int R_START = 1;
-    static final int R_STOP = 100;
-    static final int COUNT_OF_GAME = 3;
-    static final int SIZE_1 = 3;
-    static final int SIZE_2 = 2;
-    static final String RULE = "Find the greatest common divisor of given numbers.";
+    private static final int R_START = 1;
+    private static final int R_STOP = 100;
+    private static final int COUNT_OF_GAME = 3;
+    private static final int SIZE_1 = 3;
+    private static final int SIZE_2 = 2;
+    private static final String RULE = "Find the greatest common divisor of given numbers.";
 
     public static void create() {
-        int rNumber1 = 0;
-        int rNumber2 = 0;
-        String rExpression = "";
-        int progAns = 1;
-        int i;
         String[][] rezGame = new String[SIZE_1][SIZE_2];
-        for (i = 0; i < COUNT_OF_GAME; i++) {
-            rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
-            rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
-            rExpression = rNumber1 + " " + rNumber2;
-            progAns = gCDF(rNumber1, rNumber2);
+        for (int i = 0; i < COUNT_OF_GAME; i++) {
+            int rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
+            int rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
+            String rExpression = rNumber1 + " " + rNumber2;
+            int progAns = gCDF(rNumber1, rNumber2);
             rezGame[i][0] = rExpression;
             rezGame[i][1] = String.valueOf(progAns);
         }

@@ -7,28 +7,23 @@ import java.util.Random;
 
 
 public class CalcGame {
-    static final int R_START = 0;
-    static final int R_STOP = 100;
-    static final int COUNT_OF_GAME = 3;
-    static final int SIZE_1 = 3;
-    static final int SIZE_2 = 2;
-    static final String RULE = "What is the result of the expression?";
+    private static final int R_START = 0;
+    private static final int R_STOP = 100;
+    private static final int COUNT_OF_GAME = 3;
+    private static final int SIZE_1 = 3;
+    private static final int SIZE_2 = 2;
+    private static final String RULE = "What is the result of the expression?";
+    private static final char[] ARR_OPERAND = {'+', '-', '*'};
 
     public static void create() {
-        int rNumber1 = 0;
-        int rNumber2 = 0;
-        String rOperand = "";
-        String rExpression = "";
-        int progAns = 0;
-        int i;
         String[][] rezGame = new String[SIZE_1][SIZE_2];
-        for (i = 0; i < COUNT_OF_GAME; i++) {
-            rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
-            rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
-            rOperand = generateRandomOperand(R_START, R_STOP);
-            rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
+        for (int i = 0; i < COUNT_OF_GAME; i++) {
+            int rNumber1 = GenerateRandomInt.generate(R_START, R_STOP);
+            int rNumber2 = GenerateRandomInt.generate(R_START, R_STOP);
+            String rOperand = generateRandomOperand(R_START, R_STOP);
+            String rExpression = rNumber1 + " " + rOperand + " " + rNumber2;
 
-            progAns = expression(rOperand, rNumber1, rNumber2);
+            int progAns = expression(rOperand, rNumber1, rNumber2);
             rezGame[i][0] = rExpression;
             rezGame[i][1] = String.valueOf(progAns);
         }
@@ -36,9 +31,8 @@ public class CalcGame {
     }
 
     public static String generateRandomOperand(int min, int max) {
-        char[] arrOperand = {'+', '-', '*'};
         Random random = new Random();
-        String operand = String.valueOf(arrOperand[random.nextInt(arrOperand.length)]);
+        String operand = String.valueOf(ARR_OPERAND[random.nextInt(ARR_OPERAND.length)]);
         return operand;
     }
 
@@ -51,7 +45,8 @@ public class CalcGame {
                 break;
             case "*": progAns = nNumber1 * nNumber2;
                 break;
-            default: progAns = nNumber1 + nNumber2;
+            default: progAns = 0;
+                break;
         }
         return progAns;
     }
