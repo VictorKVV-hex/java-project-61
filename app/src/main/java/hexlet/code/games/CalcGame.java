@@ -37,7 +37,7 @@ public class CalcGame {
     }
 
     public static int expression(String sOperand, int nNumber1, int nNumber2) {
-        int progAns = 0;
+        Integer progAns;
         switch (sOperand) {
             case "+": progAns = nNumber1 + nNumber2;
                 break;
@@ -45,7 +45,7 @@ public class CalcGame {
                 break;
             case "*": progAns = nNumber1 * nNumber2;
                 break;
-            default: progAns = 0;
+            default: progAns = null;
                 break;
         }
         return progAns;
